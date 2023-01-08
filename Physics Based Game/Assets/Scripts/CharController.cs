@@ -63,42 +63,4 @@ public class CharController : MonoBehaviour
         if (rb == null || rb.isKinematic) return;
         rb.AddForceAtPosition(force * controller.velocity.normalized, hit.point);
     }
-        //Movement();
     }
-
-//     void Movement()
-//     {
-//         grounded = controller.isGrounded;
-//         if (grounded)
-//         {
-//             jumping.y = 0f;
-//         }
-
-//         float horizontal = Input.GetAxis("Horizontal");
-//         float vertical = Input.GetAxis("Vertical");
-//         Vector3 direction = new Vector3(horizontal , 0, vertical).normalized;
-
-//         controller.Move(direction * speed * Time.deltaTime);
-
-//         // if (direction != Vector3.zero)
-//         // {
-//         //     controller.Move(direction.normalized * speed * Time.deltaTime);
-//         // }
-
-//         if (Input.GetButtonDown("Jump") && grounded){
-//             jumping.y += Mathf.Sqrt(jumpHeight * -3.0f * gravityVal);
-//             grounded = false; 
-            
-        
-//         }
-//         controller.Move(jumping * Time.deltaTime);
-//         jumping.y += gravityVal * Time.deltaTime;
-//     }
-
-//     void OnControllerColliderHit(ControllerColliderHit hit)
-//     {
-//         Rigidbody rb = hit.collider.attachedRigidbody;
-//         if (rb == null || rb.isKinematic) return;
-//         rb.AddForceAtPosition(force * controller.velocity.normalized, hit.point);
-//     }
-// }
