@@ -29,6 +29,7 @@ public class CharController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(jumping);
         grounded = controller.isGrounded;
         if (grounded && jumping.y < 0)
         {
