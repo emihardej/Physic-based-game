@@ -29,7 +29,7 @@ public class CharController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(jumping);
+        //Debug.Log(jumping);
         grounded = controller.isGrounded;
         if (grounded && jumping.y < 0)
         {
@@ -48,7 +48,7 @@ public class CharController : MonoBehaviour
         // }
 
         if (Input.GetKey(KeyCode.Space) && grounded){
-            Debug.Log("Jump");
+            //Debug.Log("Jump");
             jumping.y += Mathf.Sqrt(jumpHeight * -3.0f * gravityVal);
             grounded = false; 
             
