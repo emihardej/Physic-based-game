@@ -5,39 +5,43 @@ using UnityEngine;
 public class ObjectSpawner : MonoBehaviour
 {
     public List<GameObject> prefabObjects;
-    // public List<GameObject> locations;
-    public List<GameObject> spawnedObjects;
+    public GameObject location;
+   // public List<GameObject> spawnedObjects;
+    public GameObject spawnedObject;
 
     void Start()
     {
-        spawnedObjects = new List<GameObject>();
+        //spawnedObjects = new List<GameObject>();
 
-        SpawnObject(RandomObjects());
+        SpawnObject();
+        
+        
     }
+
 //Update is called once per frame
     void Update()
     {
-        SpawnObject(RandomObjects());
+
     }
 
-    void SpawnObject(GameObject obj)
+// Spawn objects 
+    public void SpawnObject()
     {
-        Collider[] intersecting = Physics.OverlapSphere(transform.position, 0.2f); //code to run if nothing is intersecting as the length is 0
-
-        if (intersecting.Length == 0) {
-            GameObject newObject = Instantiate(obj, transform.position, Quaternion.identity );
-            spawnedObjects.Add(newObject);
-        }
+        int rand = Random.Range(0, prefabObjects.Count);
+        GameObject obj = prefabObjects[rand];
+        Vector3 spawn = location.transform.position;
+        Debug.Log(spawn);
+        spawnedObject = Instantiate(obj, spawn, Quaternion.identity );
+        spawnedObject.name = location.name + "0";
+        //spawnedObjects.Add(newObject);
     }
 
-     GameObject RandomObjects()
-     {
+    public void RespawnObject()
+    {
+        Invoke("SpawnObject", 5.0f);
+    }
 
-        int rand = Random.Range(0, prefabObjects.Count);
-            
-        return prefabObjects[rand];
 
-     }
 
     
 }
