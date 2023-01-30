@@ -30,16 +30,16 @@ public class ObjectSpawner : MonoBehaviour
         int rand = Random.Range(0, prefabObjects.Count);
         GameObject obj = prefabObjects[rand];
         Vector3 spawn = location.transform.position;
-        Debug.Log(spawn);
+        //Debug.Log(spawn);
         spawnedObject = Instantiate(obj, spawn, Quaternion.identity );
         spawnedObject.name = location.name + "0";
         //spawnedObjects.Add(newObject);
     }
 
-    public void RespawnObject()
-    {
-        Invoke("SpawnObject", 5.0f);
-    }
+    // public void RespawnObject()
+    // {
+    //     Invoke("SpawnObject", 5.0f);
+    // }
 
 
 

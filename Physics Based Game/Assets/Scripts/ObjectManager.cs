@@ -4,10 +4,7 @@ using UnityEngine;
 
 public class ObjectManager : MonoBehaviour
 {
-    
-
-    //public ObjectSpawner spawner;
-    
+    public List<GameObject> prefabObjects;
     public GameObject obj;
 
     // Start is called before the first frame update
@@ -16,38 +13,35 @@ public class ObjectManager : MonoBehaviour
         
     }
 
+    //Detect object collision with floor
     void OnCollisionEnter(Collision collision)
-    {
-        //GameObject[] go = GameObject.FindGameObjectsWithTag("Object");
-        //GameObject go = GameObject.FindGameObjectWithTag("Object");
-        
+    {   
+        if (collision.collider.tag == "Floor"){
+            string objName = obj.name; 
+            string newObjName = objName.Replace("0","");
 
-        //for ( var i = 0 ; i < go.Length ; i ++){
-            //GameObject obj = go[i].GetComponent<ObjectSpawner>().spawnedObject;
-            //Debug.Log(obj);
-            //GameObject spawner = go[i].GetComponent<ObjectSpawner>().location;
-            //ObjectSpawner spawner = go[i].GetComponent<ObjectSpawner>();
-            //GameObject spawnObject = spawner.spawnedObject;
-            //Debug.Log(go[i]);
-            //Debug.Log(obj);
+            //Debug.Log(newObjName);
+            ScoreManager.instance.AddPoint();
             
-            if (collision.collider.tag == "Floor"){
-            
-                string objName = obj.name; 
-                string newObjName = objName.Replace("0","");
-                Debug.Log(newObjName);
-                GameObject loc = GameObject.Find(newObjName);
-                Destroy(obj, 2.0f);
-                RespawnObject(loc, obj.name);
-                //spawner.RespawnObject();
-            }
-        //} 
+            GameObject loc = GameObject.Find(newObjName);   //Find name of the objects spawn location
+            Destroy(obj, 15.0f);    //Destroy object
+            StartCoroutine(RespawnObject(loc, obj.name));   //Respawn a new object in original spawn location of previous object
+        }
     }
 
-    void RespawnObject(GameObject location, string objectName)
-    {
-        GameObject respawnedObject = Instantiate(obj, location.transform.position, Quaternion.identity);
+    //Instatiate new object 
+    IEnumerator RespawnObject(GameObject location, string objectName)
+    {   
+        //get new random prefab
+        int rand = Random.Range(0, prefabObjects.Count);
+        Debug.Log(rand);
+        GameObject newObject = prefabObjects[rand];
+
+        //must instatiate just before the previous object is destroyed
+        yield return new WaitForSeconds(14.99f);
+        GameObject respawnedObject = Instantiate(newObject, location.transform.position, Quaternion.identity);
         respawnedObject.name = objectName;
+        
     }
 
 }

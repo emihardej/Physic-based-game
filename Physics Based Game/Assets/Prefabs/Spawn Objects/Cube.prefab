@@ -123,5 +123,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75f217e814b228e41b03b21ebed60410, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  prefabObjects:
+  - {fileID: 4682887191594060577}
+  - {fileID: 6871912208367620117, guid: 98b73398b380e61499f458273fbce5c9, type: 3}
+  - {fileID: 4476637204986853853, guid: 17d5c74202a8bc541ad83f22ad4ef744, type: 3}
   obj: {fileID: 4682887191594060577}
-  location: {fileID: 8398929593055449553}
