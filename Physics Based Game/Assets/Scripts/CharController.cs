@@ -6,11 +6,9 @@ public class CharController : MonoBehaviour
 {
     private CharacterController controller;
 
-    [SerializeField]
-    private float speed = 5f;
-
-    [SerializeField] 
-    private float force = 10;
+    public float speed = 5f;
+    public float rotationSpeed = 720f;
+    public float force = 10;
 
     private bool grounded;
     private Vector3 jumping;
@@ -42,10 +40,12 @@ public class CharController : MonoBehaviour
 
         controller.Move(direction * speed * Time.deltaTime);
 
-        // if (direction != Vector3.zero)
-        // {
-        //     controller.Move(direction.normalized * speed * Time.deltaTime);
-        // }
+        if (direction != Vector3.zero)
+        {
+            Quaternion toRotation = Quaternion.LookRotation(direction, Vector3.up);
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, rotationSpeed * Time.deltaTime);
+            //transform.forward = direction.normalized;
+        }
 
         if (Input.GetKey(KeyCode.Space) && grounded){
             //Debug.Log("Jump");
