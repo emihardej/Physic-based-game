@@ -20,7 +20,7 @@ public class ObjectManager : MonoBehaviour
             string objName = obj.name; 
             string newObjName = objName.Replace("0","");
 
-            //Debug.Log(newObjName);
+            Debug.Log("hit");
             ScoreManager.instance.AddPoint();
             
             GameObject loc = GameObject.Find(newObjName);   //Find name of the objects spawn location
