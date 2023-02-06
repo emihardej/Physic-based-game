@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class TimeManager : MonoBehaviour
 {
+    public GameObject gameOverMenu;
     public float timeVal = 90;
     public Text timeText;
     // Update is called once per frame
@@ -18,6 +19,8 @@ public class TimeManager : MonoBehaviour
         else
         {
             Debug.Log("Times up!");
+            gameOverMenu.SetActive(true);
+            //bool player = GetComponent<CharController>().enabled = false;
             timeVal = 0;
         }
         
@@ -38,6 +41,6 @@ public class TimeManager : MonoBehaviour
         float minutes = Mathf.FloorToInt(currentTime / 60);
         float seconds = Mathf.FloorToInt(currentTime % 60);
 
-        timeText.text = string.Format("{0:00} : {1:00}", minutes, seconds);
+        timeText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
     }
 }

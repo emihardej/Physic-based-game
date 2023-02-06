@@ -7,9 +7,11 @@ public class ScoreManager : MonoBehaviour
 {
     public static ScoreManager instance;
     public Text scoreText;
-    //public Text highScoreText;
-    int score = 0;
-    //int highScore = 0;
+    public Text endScoreText;
+    public Text highScoreText;
+    public static int score = 0;
+    public static int endScore = 0;
+    int highScore = 0;
 
     private void Awake() 
     {
@@ -18,17 +20,26 @@ public class ScoreManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //highScore = PlayerPrefs.GetInt("highscore", 0);
-        scoreText.text = "Score: " + score.ToString();
-        //highScoreText.text = highScore.ToString();
+        highScore = PlayerPrefs.GetInt("highscore", 0);
+        scoreText.text = score.ToString();
+        endScoreText.text = endScore.ToString();
+        highScoreText.text = highScore.ToString();
     }
 
     public void AddPoint()
     {
         score += 1;
+        endScore += 1;
         scoreText.text = score.ToString();
-        //if (highScore < score){
-        //    PlayerPrefs.SetInt("highscore", score);
-        //}
+        endScoreText.text = endScore.ToString();
+        if (highScore < score){
+            PlayerPrefs.SetInt("highscore", score);
+        }
+    }
+
+    public void ResetScore()
+    {
+        score = 0; 
+        endScore = 0;
     }
 }

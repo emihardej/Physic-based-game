@@ -6,11 +6,12 @@ public class ObjectManager : MonoBehaviour
 {
     public List<GameObject> prefabObjects;
     public GameObject obj;
+    AudioSource audioSource;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        audioSource = GetComponent<AudioSource>();
     }
 
     //Detect object collision with floor
@@ -19,6 +20,7 @@ public class ObjectManager : MonoBehaviour
         if (collision.collider.tag == "Floor"){
             string objName = obj.name; 
             string newObjName = objName.Replace("0","");
+            audioSource.Play();
 
             Debug.Log("hit");
             ScoreManager.instance.AddPoint();

@@ -1,0 +1,155 @@
+fileFormatVersion: 2
+guid: 8a380d2add5516e4999ae90eb7ef8b02
+ModelImporter:
+  serializedVersion: 19301
+  internalIDToNameTable:
+  - first:
+      74: -967517279627028381
+    second: 01_Idle
+  - first:
+      74: 4678518991831434520
+    second: 02_Walk
+  - first:
+      74: 3861889938167859698
+    second: 03_Run
+  - first:
+      74: 8194392022702732815
+    second: 04_Jump
+  - first:
+      74: 9070217896255875204
+    second: 06_Eat
+  - first:
+      74: 2861308054605402755
+    second: 08_Sleep_L
+  - first:
+      74: 4238554586861866884
+    second: 09_Sleep_R
+  - first:
+      74: -3651492516551890797
+    second: 10_Challenge_Pose_L
+  - first:
+      74: -2072332039588262360
+    second: 11_Challenge_Pose_R
+  - first:
+      74: 6068090412437716981
+    second: 12_Challenge_Walk_L
+  - first:
+      74: 1441090621127629122
+    second: 13_Challenge_Walk_R
+  - first:
+      74: 9120447601750207774
+    second: 14_Puripuri
+  - first:
+      74: -8482953883983414327
+    second: 16_Punch_L
+  - first:
+      74: 3605195545815750725
+    second: 17_Punch_R
+  - first:
+      74: -6735092085928584666
+    second: 05_Sit
+  - first:
+      74: -3962197711724787295
+    second: 07_Catloaf
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tom _Body
+    second: {fileID: 2100000, guid: c92baebe3a37cc14a963a0bd22afea85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tom_Face_Relax
+    second: {fileID: 2100000, guid: 3e825be8fc38a8d4e9448493ce71faeb, type: 2}
+  materials:
+    materialImportMode: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 0
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

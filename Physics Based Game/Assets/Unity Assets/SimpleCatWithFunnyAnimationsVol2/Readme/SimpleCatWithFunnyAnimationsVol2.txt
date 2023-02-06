@@ -1,0 +1,15 @@
+Simple Cat with Funny Animations Vol.2
+
+
+Simple Cat with Funny Animations Vol.2 is a package of characters work with generic animation system.
+
+Every cat can use all animations in "Simple Cat with Funny Animations" series.
+
+
+Requirement
+Unity version 2019.4.0 or higher
+
+
+Cacaoin3d
+https://cacaoin3d.seesaa.net/
+cacaoin3d@gmail.com
