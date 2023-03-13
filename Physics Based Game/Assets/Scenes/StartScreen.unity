@@ -2274,7 +2274,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 661709124}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1061652882}
@@ -2282,7 +2282,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.6, y: -4}
+  m_AnchoredPosition: {x: -1.6, y: -21}
   m_SizeDelta: {x: 502.602, y: 187.72298}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &661709126
@@ -2320,9 +2320,8 @@ MonoBehaviour:
   m_Text: 'Run around the house and knock as many random objects to the floor as
     you can before the timer runs out.
 
-    Objects will appear on shelves, tables
-    and other surfaces (anywhere but the floor) and come in different shapes and
-    sizes and may be worth more or less points. '
+    Objects can appear on shelves, tables
+    and other surfaces (anywhere but the floor)!'
 --- !u!222 &661709127
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2473,10 +2472,10 @@ RectTransform:
   m_Father: {fileID: 860704158}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -430.5}
-  m_SizeDelta: {x: 462.00058, y: 62.915604}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 0, y: -37.5}
+  m_SizeDelta: {x: 462.00058, y: 62.91559}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &747197803
 MonoBehaviour:
@@ -2777,10 +2776,10 @@ RectTransform:
   m_Father: {fileID: 1759349936}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -689, y: 346}
-  m_SizeDelta: {x: 3910.9678, y: 108.51935}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 687.7, y: -229.6}
+  m_SizeDelta: {x: 1809.0957, y: 349.89398}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &852920580
 MonoBehaviour:
@@ -2801,7 +2800,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Cat-aclysm: \n\t\t\t\tHome Wreckovation"
+  m_text: "Cat-aclysm: \n\t\tHome Wreckovation"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b0b5cf8906f18bb43af16083df7aa1cc, type: 2}
   m_sharedMaterial: {fileID: 8995723564997755422, guid: b0b5cf8906f18bb43af16083df7aa1cc,
@@ -2829,14 +2828,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 200
-  m_fontSizeBase: 200
+  m_fontSize: 127.95
+  m_fontSizeBase: 170
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 100
+  m_fontSizeMax: 200
   m_fontStyle: 16
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 5
@@ -2845,7 +2844,7 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_enableWordWrapping: 0
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
@@ -3104,10 +3103,10 @@ RectTransform:
   m_Father: {fileID: 860704158}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2.7, y: 288}
-  m_SizeDelta: {x: 864.0471, y: 130.43321}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 2.7, y: -105}
+  m_SizeDelta: {x: 864.0471, y: 130.43323}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &929493126
 MonoBehaviour:
@@ -8292,7 +8291,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.000045776367, y: 0.00001335144}
+  m_AnchoredPosition: {x: 0.000045776367, y: 0.000015258789}
   m_SizeDelta: {x: -0.000061035156, y: -0.0000076293945}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1106567627
@@ -8621,10 +8620,10 @@ RectTransform:
   m_Father: {fileID: 860704158}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.6, y: -65.033}
-  m_SizeDelta: {x: 667.1277, y: 575.63214}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 13.400024, y: -65.03296}
+  m_SizeDelta: {x: -1154.9502, y: -210.36786}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1323150687
 MonoBehaviour:
@@ -8647,7 +8646,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 66fff5872790fcf48b203853531557ae, type: 3}
-    m_FontSize: 20
+    m_FontSize: 25
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
@@ -8662,8 +8661,9 @@ MonoBehaviour:
     visual assets are available on the Unity Asset Store\n\nEnvironment \nMess Maker
     FREE by The Quantum Nexus, Kids Clock PBR by SR Studios Kerala, Low Poly Simple
     Furniture by Gobormu, Free: House Interior by Studio Billion, Farland Skies by
-    Borodar\n\nCharacter Model & Animations\nFree Chibi Cat by Ladymito\n\nAudio\n\nMusic\n\nSound
-    Effects"
+    Borodar\n\nCharacter Model & Animations\nSimple Cat by CacaoIn3D\n\nAudio\nAll
+    audio is royalty from bensound.com and pixabay.com\n\nMusic\nClear Day and Jazzy
+    Frenchy by Benjamin Tissot\n\nSound Effects\nAssorted sound effectd from pixabay.com"
 --- !u!222 &1323150688
 CanvasRenderer:
   m_ObjectHideFlags: 0

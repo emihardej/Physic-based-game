@@ -25,11 +25,11 @@ public class Scenes : MonoBehaviour
         atMainMenu = true;
     }
 
+//Switch to second tutorial camera
     public void Tutorial()
     {
-        
         Vector3 mainCamPos= mainCamera.transform.position;
-        
+    
         if (atMainMenu)
         {
             mainMenu.SetActive(false);
@@ -37,41 +37,46 @@ public class Scenes : MonoBehaviour
             
            mainCamera.transform.position = tutorialCameraPos.transform.position;
            mainCamera.transform.rotation = tutorialCameraPos.transform.rotation;
-            Debug.Log(mainCameraPos.transform.position);
-            Debug.Log(tutorialCameraPos.transform.position);
+            // Debug.Log(mainCameraPos.transform.position);
+            // Debug.Log(tutorialCameraPos.transform.position);
             
         }
         
     }
 
+//Switch to main start menu camera
     public void BackfromTutorial()
     {   
         atMainMenu = false;
-        Debug.Log(atMainMenu);
-        Debug.Log("hit");
+        // Debug.Log(atMainMenu);
+        // Debug.Log("hit");
         if (atMainMenu == false)
         {
-            Debug.Log("hit");
+            // Debug.Log("hit");
             mainMenu.SetActive(true);
             mainCamera.transform.position = mainCameraPos.transform.position;
             mainCamera.transform.rotation = mainCameraPos.transform.rotation;
             atMainMenu = true;
         }
     }
+//Load game scene
     public void PlayGame()
     {
         SceneManager.LoadScene(1);
     }
+//Show credits panel
     public void Credits()
     {
         mainMenu.SetActive(false);
         creditsMenu.SetActive(true);
     }
+//Hide credits panel
     public void BackFromCredits()
     {
         mainMenu.SetActive(true);
         creditsMenu.SetActive(false);
     }
+// Quit Game
     public void QuitGame()
     {
         Debug.Log("Quit Game");

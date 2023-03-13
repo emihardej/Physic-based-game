@@ -25,18 +25,19 @@ public class ScoreManager : MonoBehaviour
         endScoreText.text = endScore.ToString();
         highScoreText.text = highScore.ToString();
     }
-
+// Add point to score
     public void AddPoint()
     {
         score += 1;
         endScore += 1;
         scoreText.text = score.ToString();
         endScoreText.text = endScore.ToString();
+        //if current level score is higher than high score, save high score
         if (highScore < score){
             PlayerPrefs.SetInt("highscore", score);
         }
     }
-
+// Reset score on restart
     public void ResetScore()
     {
         score = 0; 

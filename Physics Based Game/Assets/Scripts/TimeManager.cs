@@ -11,6 +11,7 @@ public class TimeManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Countdown timer
         if (timeVal > 0)
         {
             timeVal -= Time.deltaTime;
@@ -20,10 +21,8 @@ public class TimeManager : MonoBehaviour
         {
             Debug.Log("Times up!");
             gameOverMenu.SetActive(true);
-            //bool player = GetComponent<CharController>().enabled = false;
             timeVal = 0;
         }
-        
     }
 
     // Update and display current time on timer

@@ -9,6 +9,7 @@ public class ObjectAudio : MonoBehaviour
     {
         audioSource = GetComponent<AudioSource>();
     }
+    //Plays audio sound effect for objects that hit the floor
     void OnCollisionEnter(Collision collision)
     {   
         if (collision.collider.tag == "Floor"){

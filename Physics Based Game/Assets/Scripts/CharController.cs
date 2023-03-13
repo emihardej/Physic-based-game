@@ -29,8 +29,6 @@ public class CharController : MonoBehaviour
     public int wait = 5;
     bool soundPlaying = true;
 
-    
-
     void Start()
     {
         controller = GetComponent<CharacterController>();
@@ -67,7 +65,6 @@ public class CharController : MonoBehaviour
                 //turning character to face forward direction
                 Quaternion toRotation = Quaternion.LookRotation(direction, Vector3.up);
                 transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, rotationSpeed * Time.deltaTime);
-                //transform.forward = direction.normalized;
             }
             else if( direction == Vector3.zero) //not moving
             {
@@ -94,12 +91,11 @@ public class CharController : MonoBehaviour
 
     private void Jump()
     {
-        //animator.SetFloat("moveState", 1);
         animator.SetTrigger("Jump");
-        velocity.y += Mathf.Sqrt(jumpHeight * -2 * gravityVal);
-        //grounded = false; 
+        velocity.y += Mathf.Sqrt(jumpHeight * -2 * gravityVal); //translate charater on y axis 
     }
 
+// collider for hitting objects and rigidbody
     void OnControllerColliderHit(ControllerColliderHit hit)
     {
         Rigidbody rb = hit.collider.attachedRigidbody;
